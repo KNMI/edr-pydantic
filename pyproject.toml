@@ -34,7 +34,7 @@ requires = ["flit>=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [tool.flit.module]
-name = "edr-pydantic"
+name = "edr_pydantic"
 
 [tool.flit.sdist]
 exclude = [

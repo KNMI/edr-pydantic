@@ -1,1 +1,1 @@
-# pypi-edr-github-test
+# edr_pydantic

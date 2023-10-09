@@ -18,5 +18,9 @@ class Link(EDRBaseModel):
     title: Optional[str] = None
     length: Optional[int] = None
     templated: Optional[bool] = None
-    # TODO Dataquery link separate from Link because variables is required there?
     variables: Optional[Union[Variables, CubeVariables, CorridorVariables, ItemVariables, RadiusVariables]] = None
+
+
+# For EDRQueryLink the variables element is required compared to the Link object
+class EDRQueryLink(Link, extra="allow"):
+    variables: Union[Variables, CubeVariables, CorridorVariables, ItemVariables, RadiusVariables]

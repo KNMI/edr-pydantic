@@ -2,9 +2,8 @@ import json
 from pathlib import Path
 
 import pytest
+from edr_pydantic.collections import CollectionsModel
 from pydantic import ValidationError
-
-from src.edr_pydantic.collections import CollectionsModel
 
 
 happy_cases = [

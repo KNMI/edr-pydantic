@@ -1,21 +1,9 @@
 from typing import Optional
-from typing import Union
 
+from .link import EDRQueryLink
 from .my_base_model import EDRBaseModel
-from .variables import CorridorVariables
-from .variables import CubeVariables
-from .variables import ItemVariables
-from .variables import RadiusVariables
-from .variables import Variables
 
 
-class EDRQueryLink(EDRBaseModel, extra="allow"):
-    href: str
-    rel: str
-    variables: Union[Variables, CubeVariables, CorridorVariables, ItemVariables, RadiusVariables]
-
-
-# TODO Why not use the Link object, difference is required variables for this link?
 class EDRQuery(EDRBaseModel):
     link: EDRQueryLink
 
@@ -27,7 +15,10 @@ class DataQueries(EDRBaseModel):
     cube: Optional[EDRQuery] = None
     trajectory: Optional[EDRQuery] = None
     corridor: Optional[EDRQuery] = None
-    # TODO Difference object/req: item, location, plus instances (only for collection)?
+    # TODO Difference object/req: item, location?
     locations: Optional[EDRQuery] = None
     items: Optional[EDRQuery] = None
+
+
+class CollectionDataQueries(DataQueries):
     instances: Optional[EDRQuery] = None

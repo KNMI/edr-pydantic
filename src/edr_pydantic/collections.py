@@ -2,6 +2,7 @@ from typing import Dict
 from typing import List
 from typing import Optional
 
+from .data_queries import CollectionDataQueries
 from .data_queries import DataQueries
 from .extent import Extent
 from .link import Link
@@ -9,7 +10,6 @@ from .my_base_model import EDRBaseModel
 from .parameter import Parameter
 
 
-# TODO instances or collections as base?
 class Collection(EDRBaseModel):
     id: str
     title: Optional[str] = None
@@ -17,7 +17,7 @@ class Collection(EDRBaseModel):
     keywords: Optional[List[str]] = None
     links: List[Link]
     extent: Extent
-    data_queries: Optional[DataQueries] = None
+    data_queries: Optional[CollectionDataQueries] = None
     # TODO According to req A.13 it should be CRSDetails object
     crs: Optional[List[str]] = None
     output_formats: Optional[List[str]] = None
@@ -33,7 +33,7 @@ class CollectionsModel(EDRBaseModel):
 
 # For now, the instance metadata corresponds to the first collection metadata. So they have equal classes
 class Instance(Collection):
-    pass
+    data_queries: Optional[DataQueries] = None
 
 
 class InstancesModel(EDRBaseModel):

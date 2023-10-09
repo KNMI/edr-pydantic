@@ -20,8 +20,8 @@ class Temporal(EDRBaseModel):
 
 
 class Vertical(EDRBaseModel):
-    interval: List[List[float]]
-    values: List[float]
+    interval: List[List[str]]
+    values: List[str]
     vrs: str
 
 

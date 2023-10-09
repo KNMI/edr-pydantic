@@ -1,6 +1,6 @@
 [project]
 name = "edr-pydantic"
-description = "The Pydantic models for CoverageJSON"
+description = "Pydantic models for OGC Enviromental Data (EDR) API"
 readme = "README.md"
 requires-python = ">=3.8"
 license = {file = "LICENSE"}

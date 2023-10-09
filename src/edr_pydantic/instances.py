@@ -9,8 +9,8 @@ from .my_base_model import EDRBaseModel
 from .parameter import Parameter
 
 
-# TODO instances or collections as base?
-class Collection(EDRBaseModel):
+# TODO Difference between Instance and Collection?
+class Instance(EDRBaseModel):
     id: str
     title: Optional[str] = None
     description: Optional[str] = None
@@ -24,16 +24,6 @@ class Collection(EDRBaseModel):
     parameter_names: Dict[str, Parameter]
     # TODO According to req A.13 MAY have distanceunits. If radius is in link, it SHALL have distanceunits
     distanceunits: Optional[List[str]] = None
-
-
-class CollectionsModel(EDRBaseModel):
-    links: List[Link]
-    collections: List[Collection]
-
-
-# For now, the instance metadata corresponds to the first collection metadata. So they have equal classes
-class Instance(Collection):
-    pass
 
 
 class InstancesModel(EDRBaseModel):

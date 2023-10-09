@@ -11,12 +11,12 @@ from .variables import Variables
 
 class Link(EDRBaseModel):
     href: str
-    rel: str
-    # TODO A.21 & A.23 all links shall include rel and type? rc-collections-info-links
-    type: Optional[str] = None
     hreflang: Optional[str] = None
+    rel: str
+    # TODO According to A.21 & A.23 all links shall include type
+    type: Optional[str] = None
     title: Optional[str] = None
     length: Optional[int] = None
     templated: Optional[bool] = None
-    # TODO dataquery link separate because variables is required there?
-    variables: Optional[Union[Variables, CubeVariables, CorridorVariables, ItemVariables, RadiusVariables]]
+    # TODO Dataquery link separate from Link because variables is required there?
+    variables: Optional[Union[Variables, CubeVariables, CorridorVariables, ItemVariables, RadiusVariables]] = None

@@ -1,6 +1,3 @@
-from __future__ import annotations
-
-from typing import Dict
 from typing import List
 from typing import Literal
 from typing import Optional
@@ -12,21 +9,13 @@ from .observed_property import ObservedProperty
 from .unit import Unit
 
 
-class ParameterNames(EDRBaseModel):
-    parameter_names: Dict[str, Parameter]
-
-
 class Parameter(EDRBaseModel, extra="allow"):
     type: Literal["Parameter"] = "Parameter"
-    observedProperty: ObservedProperty  # noqa: N815
     id: Optional[str] = None
     label: Optional[str] = None
     description: Optional[str] = None
-    # TODO no duplicates keys
-    # TODO int in list int should be unique
-    # TODO category encoding not in parameterobject, we don't use it??
-    # categoryEncoding: Optional[Dict[str, Union[int, List[int]]]] = None  # noqa: N815
     unit: Optional[Unit] = None
+    observedProperty: ObservedProperty  # noqa: N815
 
     @model_validator(mode="after")
     def must_not_have_unit_if_observed_property_has_categories(self):

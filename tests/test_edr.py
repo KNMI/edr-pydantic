@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 
 import pytest
+from edr_pydantic.capabilities import LandingPageModel
 from edr_pydantic.collections import Collections
 from edr_pydantic.collections import Instance
 from edr_pydantic.unit import Unit
@@ -11,6 +12,7 @@ happy_cases = [
     ("knmi-example-collections.json", Collections),
     ("doc-example-collections.json", Collections),
     ("simple-instance.json", Instance),
+    ("landing-page.json", LandingPageModel),
 ]
 
 
@@ -33,7 +35,7 @@ def test_happy_cases(file_name, object_type):
     assert object_type.model_validate_json(json_string).model_dump_json(exclude_none=True) == json_string
 
 
-error_cases = [("unit-label-or-symbol.json", Unit, r"Either 'label' or 'symbol' should be set")]
+error_cases = [("label-or-symbol-unit.json", Unit, r"Either 'label' or 'symbol' should be set")]
 
 
 @pytest.mark.parametrize("file_name, object_type, error_message", error_cases)

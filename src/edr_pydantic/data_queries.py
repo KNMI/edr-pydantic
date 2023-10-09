@@ -18,6 +18,8 @@ class DataQueries(EDRBaseModel):
     # TODO Difference object/req: item, location?
     locations: Optional[EDRQuery] = None
     items: Optional[EDRQuery] = None
+    # TODO ticket maken en maken voor separation
+    instances: Optional[EDRQuery] = None
 
 
 class CollectionDataQueries(DataQueries):

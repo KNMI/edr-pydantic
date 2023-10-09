@@ -2,13 +2,13 @@ import json
 from pathlib import Path
 
 import pytest
-from edr_pydantic.collections import CollectionsModel
+from edr_pydantic.collections import Collections
 from pydantic import ValidationError
 
 
 happy_cases = [
-    ("knmi-example-collection.json", CollectionsModel),
-    ("doc-example-collection.json", CollectionsModel),
+    ("knmi-example-collection.json", Collections),
+    ("doc-example-collection.json", Collections),
 ]
 
 

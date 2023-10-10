@@ -17,11 +17,11 @@ class Collection(EDRBaseModel):
     links: List[Link]
     extent: Extent
     data_queries: Optional[DataQueries] = None
-    # TODO According to req A.13 it should be CRSDetails object
+    # TODO According to req A.13 it shall be CRSDetails object, according to C.1 it is a string array
     crs: Optional[List[str]] = None
     output_formats: Optional[List[str]] = None
     parameter_names: Dict[str, Parameter]
-    # TODO According to req A.13 MAY have distanceunits. If radius is in link, it SHALL have distanceunits
+    # TODO According to req A.13 may have distanceunits. If radius is in link, it shall have distanceunits
     distanceunits: Optional[List[str]] = None
 
 

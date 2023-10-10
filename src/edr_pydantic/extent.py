@@ -12,9 +12,7 @@ class Spatial(EDRBaseModel):
 
 
 class Temporal(EDRBaseModel):
-    # TODO Check: Array of ISO 8601 Data Array
     interval: List[List[AwareDatetime]]
-    # TODO Check: ISO 8601 Data Array
     values: List[str]
     trs: str
 

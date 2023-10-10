@@ -15,12 +15,7 @@ class DataQueries(EDRBaseModel):
     cube: Optional[EDRQuery] = None
     trajectory: Optional[EDRQuery] = None
     corridor: Optional[EDRQuery] = None
-    # TODO Difference object/req: item, location?
     locations: Optional[EDRQuery] = None
     items: Optional[EDRQuery] = None
-    # TODO ticket maken en maken voor separation
-    instances: Optional[EDRQuery] = None
-
-
-class CollectionDataQueries(DataQueries):
+    # TODO Separate Instance and Collection objects
     instances: Optional[EDRQuery] = None

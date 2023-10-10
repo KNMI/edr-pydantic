@@ -24,13 +24,6 @@ def test_happy_cases(file_name, object_type):
         data = json.load(f)
     json_string = json.dumps(data, separators=(",", ":"), ensure_ascii=False)
 
-    # # Writing to sample.json
-    # with open("sample1.json", "w") as outfile:
-    #     outfile.write(json_string)
-    #     # Writing to sample.json
-    # with open("sample2.json", "w") as outfile:
-    #     outfile.write(object_type.model_validate_json(json_string).model_dump_json(exclude_none=True))
-
     # Round-trip
     assert object_type.model_validate_json(json_string).model_dump_json(exclude_none=True) == json_string
 

@@ -23,7 +23,15 @@ class Vertical(EdrBaseModel):
     vrs: str
 
 
+class Custom(EdrBaseModel):
+    interval: List[str]
+    id: str
+    values: List[str]
+    reference: Optional[str] = None
+
+
 class Extent(EdrBaseModel):
     spatial: Spatial
     temporal: Optional[Temporal] = None
     vertical: Optional[Vertical] = None
+    custom: Optional[List[Custom]] = None

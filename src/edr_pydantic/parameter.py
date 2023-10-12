@@ -4,12 +4,12 @@ from typing import Optional
 
 from pydantic import model_validator
 
-from .my_base_model import EDRBaseModel
+from .base_model import EdrBaseModel
 from .observed_property import ObservedProperty
 from .unit import Unit
 
 
-class Parameter(EDRBaseModel, extra="allow"):
+class Parameter(EdrBaseModel, extra="allow"):
     type: Literal["Parameter"] = "Parameter"
     id: Optional[str] = None
     label: Optional[str] = None
@@ -28,7 +28,7 @@ class Parameter(EDRBaseModel, extra="allow"):
         return self
 
 
-class ParameterGroup(EDRBaseModel, extra="allow"):
+class ParameterGroup(EdrBaseModel, extra="allow"):
     type: Literal["ParameterGroup"] = "ParameterGroup"
     id: Optional[str] = None
     label: Optional[str] = None

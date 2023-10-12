@@ -2,7 +2,7 @@ from pydantic import BaseModel as PydanticBaseModel
 from pydantic import ConfigDict
 
 
-class EDRBaseModel(PydanticBaseModel):
+class EdrBaseModel(PydanticBaseModel):
     model_config = ConfigDict(
         str_strip_whitespace=True,
         extra="forbid",

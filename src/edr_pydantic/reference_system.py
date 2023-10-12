@@ -1,6 +1,7 @@
-from .my_base_model import EDRBaseModel
+from .base_model import EdrBaseModel
 
 
-class CRS(EDRBaseModel):
-    name: str  # MAY EPSG code
-    wkt: str  # SHALL Well Known Text
+class CRS(EdrBaseModel):
+    name: str  # # This MAY be an EPSG code
+    # TODO: Implement WKT (Well Known Text) validator
+    wkt: str

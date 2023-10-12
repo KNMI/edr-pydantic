@@ -1,14 +1,14 @@
 from typing import Optional
 
+from .base_model import EdrBaseModel
 from .link import EDRQueryLink
-from .my_base_model import EDRBaseModel
 
 
-class EDRQuery(EDRBaseModel):
+class EDRQuery(EdrBaseModel):
     link: EDRQueryLink
 
 
-class DataQueries(EDRBaseModel):
+class DataQueries(EdrBaseModel):
     position: Optional[EDRQuery] = None
     radius: Optional[EDRQuery] = None
     area: Optional[EDRQuery] = None

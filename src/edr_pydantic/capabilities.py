@@ -3,16 +3,16 @@ from __future__ import annotations
 from typing import List
 from typing import Optional
 
+from .base_model import EdrBaseModel
 from .link import Link
-from .my_base_model import EDRBaseModel
 
 
-class Provider(EDRBaseModel):
+class Provider(EdrBaseModel):
     name: Optional[str] = None
     url: Optional[str] = None
 
 
-class Contact(EDRBaseModel):
+class Contact(EdrBaseModel):
     email: Optional[str] = None
     phone: Optional[str] = None
     fax: Optional[str] = None
@@ -25,7 +25,7 @@ class Contact(EDRBaseModel):
     country: Optional[str] = None
 
 
-class LandingPageModel(EDRBaseModel):
+class LandingPageModel(EdrBaseModel):
     links: List[Link]
     title: Optional[str] = None
     description: Optional[str] = None
@@ -34,5 +34,5 @@ class LandingPageModel(EDRBaseModel):
     contact: Optional[Contact] = None
 
 
-class ConformanceModel(EDRBaseModel):
+class ConformanceModel(EdrBaseModel):
     conformsTo: List[str]  # noqa: N815

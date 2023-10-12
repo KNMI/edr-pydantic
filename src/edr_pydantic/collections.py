@@ -2,14 +2,14 @@ from typing import Dict
 from typing import List
 from typing import Optional
 
+from .base_model import EdrBaseModel
 from .data_queries import DataQueries
 from .extent import Extent
 from .link import Link
-from .my_base_model import EDRBaseModel
 from .parameter import Parameter
 
 
-class Collection(EDRBaseModel):
+class Collection(EdrBaseModel):
     id: str
     title: Optional[str] = None
     description: Optional[str] = None
@@ -25,7 +25,7 @@ class Collection(EDRBaseModel):
     distanceunits: Optional[List[str]] = None
 
 
-class Collections(EDRBaseModel):
+class Collections(EdrBaseModel):
     links: List[Link]
     collections: List[Collection]
 
@@ -35,6 +35,6 @@ class Instance(Collection):
     pass
 
 
-class Instances(EDRBaseModel):
+class Instances(EdrBaseModel):
     links: List[Link]
     instances: List[Instance]

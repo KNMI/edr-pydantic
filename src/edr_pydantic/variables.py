@@ -1,10 +1,10 @@
 from typing import List
 from typing import Optional
 
-from .my_base_model import EDRBaseModel
+from .base_model import EdrBaseModel
 
 
-class Variables(EDRBaseModel, extra="allow"):
+class Variables(EdrBaseModel, extra="allow"):
     # TODO query_type required? Not according to C.3
     query_type: str
     output_formats: Optional[List[str]] = None

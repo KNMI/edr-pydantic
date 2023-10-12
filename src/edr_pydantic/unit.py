@@ -3,15 +3,15 @@ from typing import Union
 
 from pydantic import model_validator
 
-from .my_base_model import EDRBaseModel
+from .base_model import EdrBaseModel
 
 
-class Symbol(EDRBaseModel, extra="allow"):
+class Symbol(EdrBaseModel, extra="allow"):
     value: str
     type: str
 
 
-class Unit(EDRBaseModel):
+class Unit(EdrBaseModel):
     id: Optional[str] = None
     label: Optional[str] = None
     symbol: Optional[Union[str, Symbol]] = None

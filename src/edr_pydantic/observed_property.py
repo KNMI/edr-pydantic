@@ -1,16 +1,16 @@
 from typing import List
 from typing import Optional
 
-from .my_base_model import EDRBaseModel
+from .base_model import EdrBaseModel
 
 
-class Category(EDRBaseModel):
+class Category(EdrBaseModel):
     id: str
     label: str
     description: Optional[str] = None
 
 
-class ObservedProperty(EDRBaseModel):
+class ObservedProperty(EdrBaseModel):
     id: Optional[str] = None
     label: str
     description: Optional[str] = None

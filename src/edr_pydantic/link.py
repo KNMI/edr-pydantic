@@ -1,7 +1,7 @@
 from typing import Optional
 from typing import Union
 
-from .my_base_model import EDRBaseModel
+from .base_model import EdrBaseModel
 from .variables import CorridorVariables
 from .variables import CubeVariables
 from .variables import ItemVariables
@@ -9,7 +9,7 @@ from .variables import RadiusVariables
 from .variables import Variables
 
 
-class Link(EDRBaseModel):
+class Link(EdrBaseModel):
     href: str
     hreflang: Optional[str] = None
     rel: str

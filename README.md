@@ -1,7 +1,26 @@
-# OGC Enviromental Data Retrieval (EDR) API Pydantic
+# OGC Environmental Data Retrieval (EDR) API Pydantic
+
+<p>
+  <a href="https://github.com/knmi/edr-pydantic/actions?query=workflow%3ACI" target="_blank">
+      <img src="https://github.com/knmi/edr-pydantic/workflows/CI/badge.svg" alt="Test">
+  </a>
+  <a href="https://codecov.io/gh/knmi/edr-pydantic" target="_blank">
+      <img src="https://codecov.io/gh/knmi/edr-pydantic/branch/master/graph/badge.svg" alt="Coverage">
+  </a>
+  <a href="https://pypi.org/project/edr-pydantic" target="_blank">
+      <img src="https://img.shields.io/pypi/v/edr-pydantic?color=%2334D058&label=pypi%20package" alt="Package version">
+  </a>
+  <a href="https://pypistats.org/packages/edr-pydantic" target="_blank">
+      <img src="https://img.shields.io/pypi/dm/edr-pydantic.svg" alt="Downloads">
+  </a>
+  <a href="https://github.com/knmi/edr-pydantic/blob/master/LICENSE" target="_blank">
+      <img src="https://img.shields.io/github/license/knmi/edr-pydantic.svg" alt="License">
+  </a>
+</p>
+
 
 This repository contains the edr-pydantic Python package. It provides [Pydantic](https://pydantic-docs.helpmanual.io/) models
-for the [OGC Enviromental Data Retrieval (EDR) API](https://ogcapi.ogc.org/edr/).
+for the [OGC Environmental Data Retrieval (EDR) API](https://ogcapi.ogc.org/edr/).
 This can, for example, be used to help develop an EDR API using FastAPI.
 
 ## Install

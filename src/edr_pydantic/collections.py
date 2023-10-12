@@ -17,7 +17,7 @@ class Collection(EdrBaseModel):
     links: List[Link]
     extent: Extent
     data_queries: Optional[DataQueries] = None
-    # TODO According to req A.13 it shall be CRSDetails object, according to C.1 it is a string array
+    # TODO According to req A.13 it shall be CRS object, according to C.1 it is a string array
     crs: Optional[List[str]] = None
     output_formats: Optional[List[str]] = None
     parameter_names: Dict[str, Parameter]

@@ -149,15 +149,9 @@ This library is used to build an Environmental Data Retrieval (EDR) API, serving
 
 ## TODOs
 Help is wanted in the following areas to fully implement the EDR spec:
+* See TODOs in code listing various small inconsistencies in the spec
+* In various places there could be more validation on content
 
 ## License
 
 Apache License, Version 2.0
-
-## Authors
-
-Members of the KNMI Data Platform team. Reachable at opendata@knmi.nl.
-
-## Copyright
-
-Koninklijk Nederlands Meteorologisch Instituut (KNMI)

@@ -9,4 +9,5 @@ class EdrBaseModel(PydanticBaseModel):
         str_min_length=1,
         validate_default=True,
         validate_assignment=True,
+        strict=True,
     )

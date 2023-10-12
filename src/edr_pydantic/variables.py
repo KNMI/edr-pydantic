@@ -26,6 +26,6 @@ class CorridorVariables(Variables):
     within_units: List[str]
 
 
-class ItemVariables(Variables, extra="allow"):
-    # TODO query_type shall match query_type?
-    query_type: str
+class ItemVariables(Variables):
+    # TODO: Is unclear what is meant with Requirement A.20 statement A
+    pass

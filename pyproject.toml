@@ -1,0 +1,51 @@
+[project]
+name = "edr-pydantic"
+description = "Pydantic models for OGC Enviromental Data (EDR) API"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+    {name = "KNMI Data Platform Team", email = "opendata@knmi.nl"},
+]
+keywords = ["EDR", "Pydantic"]
+classifiers = [
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: GIS",
+    "Typing :: Typed",
+]
+version = "0.1.0"
+dependencies = ["pydantic>=2.3,<3"]
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-cov"]
+dev = ["pre-commit"]
+
+[project.urls]
+Source = "https://github.com/knmi/edr-pydantic"
+
+[build-system]
+requires = ["flit>=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.module]
+name = "edr_pydantic"
+
+[tool.flit.sdist]
+exclude = [
+    "test/",
+    ".github/",
+]
+
+[tool.mypy]
+plugins = [
+    "pydantic.mypy"
+]
+
+[tool.pydantic-mypy]
+warn_untyped_fields = true

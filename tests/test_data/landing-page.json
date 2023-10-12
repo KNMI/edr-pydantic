@@ -1,0 +1,47 @@
+{
+    "links": [
+        {
+            "href": "https://api.dataplatform.knmi.nl/edr/",
+            "rel": "self",
+            "title": "Landing Page in JSON"
+        },
+        {
+            "href": "https://api.dataplatform.knmi.nl/edr/docs",
+            "rel": "service-desc",
+            "title": "API description in HTML"
+        },
+        {
+            "href": "https://api.dataplatform.knmi.nl/edr/openapi.json",
+            "rel": "service-desc",
+            "title": "API description in JSON"
+        },
+        {
+            "href": "https://api.dataplatform.knmi.nl/edr/conformance",
+            "rel": "data",
+            "title": "Conformance Declaration in JSON"
+        },
+        {
+            "href": "https://api.dataplatform.knmi.nl/edr/collections",
+            "rel": "data",
+            "title": "Collections metadata in JSON"
+        }
+    ],
+    "title": "Observations API EDR",
+    "description": "The observation api in EDR format from the KNMI",
+    "keywords": [
+        "Weather",
+        "Temperature",
+        "Wind",
+        "Humidity",
+        "Pressure",
+        "Clouds",
+        "Radiation"
+    ],
+    "provider": {
+        "name": "KNMI - Koninklijk Nederlands Meteorologisch Instituut",
+        "url": "dataplatform.knmi.nl"
+    },
+    "contact": {
+        "email": "opendata@knmi.nl"
+    }
+}

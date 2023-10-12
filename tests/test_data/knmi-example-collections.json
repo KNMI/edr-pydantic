@@ -1,0 +1,527 @@
+{
+    "links": [
+        {
+            "href": "https://api.dataplatform.knmi.nl/edr/collections",
+            "rel": "self"
+        }
+    ],
+    "collections": [
+        {
+            "id": "observations",
+            "links": [
+                {
+                    "href": "https://api.dataplatform.knmi.nl/edr/collections/observations",
+                    "rel": "self"
+                }
+            ],
+            "extent": {
+                "spatial": {
+                    "bbox": [
+                        [
+                            -68.2758,
+                            12.13,
+                            7.1492,
+                            55.3992
+                        ]
+                    ],
+                    "crs": "WGS84"
+                },
+                "temporal": {
+                    "interval": [
+                        [
+                            "2003-04-01T00:10:00Z",
+                            "2023-10-06T10:40:00Z"
+                        ]
+                    ],
+                    "values": [
+                        "2003-04-01T00:10:00Z/2023-10-06T10:40:00Z"
+                    ],
+                    "trs": "datetime"
+                },
+                "vertical": {
+                    "interval": [
+                        [
+                            "-5.77",
+                            "112.72"
+                        ]
+                    ],
+                    "values": [
+                        "-5.0",
+                        "20.0",
+                        "45.0",
+                        "70.0",
+                        "95.0"
+                    ],
+                    "vrs": "meters"
+                }
+            },
+            "data_queries": {
+                "position": {
+                    "link": {
+                        "href": "https://api.dataplatform.knmi.nl/edr/collections/observations/position",
+                        "rel": "data",
+                        "variables": {
+                            "query_type": "position",
+                            "output_formats": [
+                                "CoverageJSON"
+                            ]
+                        }
+                    }
+                },
+                "cube": {
+                    "link": {
+                        "href": "https://api.dataplatform.knmi.nl/edr/collections/observations/cube",
+                        "rel": "data",
+                        "variables": {
+                            "query_type": "cube",
+                            "output_formats": [
+                                "CoverageJSON"
+                            ],
+                            "height_units": "m"
+                        }
+                    }
+                },
+                "locations": {
+                    "link": {
+                        "href": "https://api.dataplatform.knmi.nl/edr/collections/observations/locations",
+                        "rel": "data",
+                        "variables": {
+                            "query_type": "locations",
+                            "output_formats": [
+                                "CoverageJSON"
+                            ]
+                        }
+                    }
+                }
+            },
+            "crs": [
+                "WGS84"
+            ],
+            "output_formats": [
+                "CoverageJSON"
+            ],
+            "parameter_names": {
+                "dd_10": {
+                    "type": "Parameter",
+                    "description": "Wind, direction, average, height sensor, 10'",
+                    "unit": {
+                        "label": "degree",
+                        "symbol": {
+                            "value": "°",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://vocab.nerc.ac.uk/standard_name/wind_from_direction/",
+                        "label": "Wind from direction"
+                    }
+                },
+                "ff_10m_10": {
+                    "type": "Parameter",
+                    "description": "Wind, speed, average, converted to 10 metres, 10'",
+                    "unit": {
+                        "label": "metre per second",
+                        "symbol": {
+                            "value": "m/s",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://vocab.nerc.ac.uk/standard_name/wind_speed/",
+                        "label": "Wind speed"
+                    }
+                },
+                "fx_10m_10": {
+                    "type": "Parameter",
+                    "description": "Wind, speed, actual maximum, converted to 10 metres, 10'",
+                    "unit": {
+                        "label": "metre per second",
+                        "symbol": {
+                            "value": "m/s",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://vocab.nerc.ac.uk/standard_name/wind_speed_of_gust/",
+                        "label": "Wind speed of gust"
+                    }
+                },
+                "p_nap_msl_10": {
+                    "type": "Parameter",
+                    "description": "Air pressure, converted to MSL or NAP, 10'",
+                    "unit": {
+                        "label": "hectopascal",
+                        "symbol": {
+                            "value": "hPa",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://vocab.nerc.ac.uk/standard_name/air_pressure_at_sea_level/",
+                        "label": "Air pressure at sea level"
+                    }
+                },
+                "mor_10": {
+                    "type": "Parameter",
+                    "description": "Visibility, meteorological day vision, 10'",
+                    "unit": {
+                        "label": "metre",
+                        "symbol": {
+                            "value": "m",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://vocab.nerc.ac.uk/standard_name/visibility_in_air/",
+                        "label": "Visibility in air"
+                    }
+                },
+                "h_ceilom_10": {
+                    "type": "Parameter",
+                    "description": "Clouds, the height of the base of the first layer, 10'",
+                    "unit": {
+                        "label": "foot",
+                        "symbol": {
+                            "value": "ft",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://vocab.nerc.ac.uk/standard_name/cloud_base_altitude/",
+                        "label": "Cloud base altitude"
+                    }
+                },
+                "h1_ceilom_10": {
+                    "type": "Parameter",
+                    "description": "Clouds, the height of the base of the first layer (ceilometer), 10'",
+                    "unit": {
+                        "label": "foot",
+                        "symbol": {
+                            "value": "ft",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://vocab.nerc.ac.uk/standard_name/cloud_base_altitude/",
+                        "label": "Cloud base altitude first layer"
+                    }
+                },
+                "h2_ceilom_10": {
+                    "type": "Parameter",
+                    "description": "Clouds, the height of the base of the second layer (ceilometer), 10'",
+                    "unit": {
+                        "label": "foot",
+                        "symbol": {
+                            "value": "ft",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://vocab.nerc.ac.uk/standard_name/cloud_base_altitude/",
+                        "label": "Cloud base altitude second layer"
+                    }
+                },
+                "h3_ceilom_10": {
+                    "type": "Parameter",
+                    "description": "Clouds, the height of the base of the third layer (ceilometer), 10'",
+                    "unit": {
+                        "label": "foot",
+                        "symbol": {
+                            "value": "ft",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://vocab.nerc.ac.uk/standard_name/cloud_base_altitude/",
+                        "label": "Cloud base altitude third layer"
+                    }
+                },
+                "n_ceilom_10": {
+                    "type": "Parameter",
+                    "description": "Clouds, total degree of coverage (ceilometer), 10'",
+                    "unit": {
+                        "label": "the unit of cloud amount – okta – is an eighth of the sky dome covered by cloud",
+                        "symbol": {
+                            "value": "okta",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://vocab.nerc.ac.uk/standard_name/cloud_area_fraction/",
+                        "label": "Cloud area fraction"
+                    }
+                },
+                "n1_ceilom_10": {
+                    "type": "Parameter",
+                    "description": "Clouds, degree of coverage first layer (ceilometer), 10'",
+                    "unit": {
+                        "label": "the unit of cloud amount – okta – is an eighth of the sky dome covered by cloud",
+                        "symbol": {
+                            "value": "okta",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://vocab.nerc.ac.uk/standard_name/cloud_area_fraction/",
+                        "label": "Cloud area fraction first layer"
+                    }
+                },
+                "n2_ceilom_10": {
+                    "type": "Parameter",
+                    "description": "Clouds, degree of coverage second layer (ceilometer), 10'",
+                    "unit": {
+                        "label": "the unit of cloud amount – okta – is an eighth of the sky dome covered by cloud",
+                        "symbol": {
+                            "value": "okta",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://vocab.nerc.ac.uk/standard_name/cloud_area_fraction/",
+                        "label": "Cloud area fraction second layer"
+                    }
+                },
+                "n3_ceilom_10": {
+                    "type": "Parameter",
+                    "description": "Clouds, degree of coverage third layer (ceilometer), 10'",
+                    "unit": {
+                        "label": "the unit of cloud amount – okta – is an eighth of the sky dome covered by cloud",
+                        "symbol": {
+                            "value": "okta",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://vocab.nerc.ac.uk/standard_name/cloud_area_fraction/",
+                        "label": "Cloud area fraction third layer"
+                    }
+                },
+                "dr_pws_10": {
+                    "type": "Parameter",
+                    "description": "Precipitation, duration, present weather sensor, 10'",
+                    "unit": {
+                        "label": "second",
+                        "symbol": {
+                            "value": "s",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "precipitation_duration",
+                        "label": "Precipitation duration"
+                    }
+                },
+                "dr_regenm_10": {
+                    "type": "Parameter",
+                    "description": "Precipitation, duration, electric rain gauge, 10'",
+                    "unit": {
+                        "label": "second",
+                        "symbol": {
+                            "value": "s",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "precipitation_duration",
+                        "label": "Precipitation duration electric rain gauge"
+                    }
+                },
+                "ri_pws_10": {
+                    "type": "Parameter",
+                    "description": "Precipitation, intensity, present weather sensor, 10'",
+                    "unit": {
+                        "label": "millimetre per hour",
+                        "symbol": {
+                            "value": "mm/h",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://vocab.nerc.ac.uk/standard_name/lwe_precipitation_rate/",
+                        "label": "Precipitation rate"
+                    }
+                },
+                "ri_regenm_10": {
+                    "type": "Parameter",
+                    "description": "Precipitation, intensity, electric rain gauge, 10'",
+                    "unit": {
+                        "label": "millimetre per hour",
+                        "symbol": {
+                            "value": "mm/h",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://vocab.nerc.ac.uk/standard_name/lwe_precipitation_rate/",
+                        "label": "Precipitation rate electric rain gauge"
+                    }
+                },
+                "q_glob_10": {
+                    "type": "Parameter",
+                    "description": "Radiation, global, average, 10'",
+                    "unit": {
+                        "label": "watt per square metre",
+                        "symbol": {
+                            "value": "W/m²",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://vocab.nerc.ac.uk/standard_name/downwelling_shortwave_flux_in_air/",
+                        "label": "Radiation"
+                    }
+                },
+                "sq_10": {
+                    "type": "Parameter",
+                    "description": "Sunshine duration, duration derived from radiation, 10'",
+                    "unit": {
+                        "label": "minute",
+                        "symbol": {
+                            "value": "min",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://vocab.nerc.ac.uk/standard_name/duration_of_sunshine/",
+                        "label": "Sunshine duration"
+                    }
+                },
+                "tn_10cm_past_6h_10": {
+                    "type": "Parameter",
+                    "description": "Temperature, air, minimum, 0.1 metre, 10'",
+                    "unit": {
+                        "label": "degree Celsius",
+                        "symbol": {
+                            "value": "°C",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://vocab.nerc.ac.uk/standard_name/air_temperature/",
+                        "label": "Air temperature minimum, 0.1 metre"
+                    }
+                },
+                "t_dewp_10": {
+                    "type": "Parameter",
+                    "description": "Temperature air dewpoint 10'",
+                    "unit": {
+                        "label": "degree Celsius",
+                        "symbol": {
+                            "value": "°C",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://vocab.nerc.ac.uk/standard_name/dew_point_temperature/",
+                        "label": "Dew point temperature"
+                    }
+                },
+                "t_dryb_10": {
+                    "type": "Parameter",
+                    "description": "Temperature air 10'",
+                    "unit": {
+                        "label": "degree Celsius",
+                        "symbol": {
+                            "value": "°C",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://vocab.nerc.ac.uk/standard_name/air_temperature/",
+                        "label": "Air temperature"
+                    }
+                },
+                "tn_dryb_10": {
+                    "type": "Parameter",
+                    "description": "Temperature, air, minimum, 10'",
+                    "unit": {
+                        "label": "degree Celsius",
+                        "symbol": {
+                            "value": "°C",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://vocab.nerc.ac.uk/standard_name/air_temperature/",
+                        "label": "Air temperature minimum"
+                    }
+                },
+                "tx_dryb_10": {
+                    "type": "Parameter",
+                    "description": "Temperature, air, maximum, 10'",
+                    "unit": {
+                        "label": "degree Celsius",
+                        "symbol": {
+                            "value": "°C",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://vocab.nerc.ac.uk/standard_name/air_temperature/",
+                        "label": "Air temperature maximum"
+                    }
+                },
+                "u_10": {
+                    "type": "Parameter",
+                    "description": "Humidity air relative 10'",
+                    "unit": {
+                        "label": "percent",
+                        "symbol": {
+                            "value": "%",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://vocab.nerc.ac.uk/standard_name/relative_humidity/",
+                        "label": "Relative humidity"
+                    }
+                },
+                "ww_cor_10": {
+                    "type": "Parameter",
+                    "description": "Weather, validated code, present weather sensor, 10'",
+                    "unit": {
+                        "label": "weather code",
+                        "symbol": {
+                            "value": "code",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "KNMI: Handboek waarnemingen",
+                        "label": "Weather code (validated)"
+                    }
+                },
+                "ww_curr_10": {
+                    "type": "Parameter",
+                    "description": "Weather, code, present weather sensor, 10'",
+                    "unit": {
+                        "label": "weather code",
+                        "symbol": {
+                            "value": "code",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "WMO table 4680",
+                        "label": "Weather code"
+                    }
+                },
+                "ww_past_10": {
+                    "type": "Parameter",
+                    "description": "Weather, code previous 10', 10'",
+                    "unit": {
+                        "label": "weather code",
+                        "symbol": {
+                            "value": "code",
+                            "type": "http://www.opengis.net/def/uom/UCUM/"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "WMO table 4680",
+                        "label": "Weather code, previous 10'"
+                    }
+                }
+            }
+        }
+    ]
+}

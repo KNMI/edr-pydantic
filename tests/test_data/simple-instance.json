@@ -1,0 +1,35 @@
+{
+    "id": "hrly_obs",
+    "title": "Hourly Site Specific observations",
+    "links": [
+        {
+            "href": "https://example.org/uk-hourly-site-specific-observations",
+            "rel": "service-doc"
+        }
+    ],
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -15.0,
+                    48.0,
+                    5.0,
+                    62.0
+                ]
+            ],
+            "crs": "WGS84"
+        }
+    },
+    "parameter_names": {
+        "Wind Direction": {
+            "type": "Parameter",
+            "unit": {
+                "label": "degree true"
+            },
+            "observedProperty": {
+                "id": "https://codes.wmo.int/common/quantity-kind/_windDirection",
+                "label": "Wind Direction"
+            }
+        }
+    }
+}

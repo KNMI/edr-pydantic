@@ -1,8 +1,8 @@
 # OGC Enviromental Data Retrieval (EDR) API Pydantic
 
 This repository contains the edr-pydantic Python package. It provides [Pydantic](https://pydantic-docs.helpmanual.io/) models
-for [OGC Enviromental Data Retrieval (EDR) API](https://ogcapi.ogc.org/edr/).
-This can, for example, be used to develop an EDR API using FastAPI.
+for the [OGC Enviromental Data Retrieval (EDR) API](https://ogcapi.ogc.org/edr/).
+This can, for example, be used to help develop an EDR API using FastAPI.
 
 ## Install
 ```shell

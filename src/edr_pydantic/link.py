@@ -21,6 +21,6 @@ class Link(EDRBaseModel):
     variables: Optional[Union[Variables, CubeVariables, CorridorVariables, ItemVariables, RadiusVariables]] = None
 
 
-# For EDRQueryLink the variables element is required compared to the Link object
+# For EDRQueryLink the variables element is required unlike in other Link objects
 class EDRQueryLink(Link, extra="allow"):
     variables: Union[Variables, CubeVariables, CorridorVariables, ItemVariables, RadiusVariables]

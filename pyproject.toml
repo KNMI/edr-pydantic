@@ -1,6 +1,6 @@
 [project]
 name = "edr-pydantic"
-description = "Pydantic models for OGC Enviromental Data (EDR) API"
+description = "Pydantic models for OGC Environmental Data (EDR) API"
 readme = "README.md"
 requires-python = ">=3.8"
 license = {file = "LICENSE"}
@@ -19,7 +19,7 @@ classifiers = [
     "Topic :: Scientific/Engineering :: GIS",
     "Typing :: Typed",
 ]
-version = "0.1.0"
+version = "0.1.1"
 dependencies = ["pydantic>=2.3,<3"]
 
 [project.optional-dependencies]

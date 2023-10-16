@@ -38,11 +38,11 @@ pip install git+https://github.com/KNMI/edr-pydantic.git
 
 ```python
 from edr_pydantic.collections import Collection
-from edr_pydantic.data_queries import EDRQuery, EDRQueryLink
+from edr_pydantic.data_queries import EDRQuery, EDRQueryLink, DataQueries
 from edr_pydantic.extent import Extent, Spatial
 from edr_pydantic.link import Link
 from edr_pydantic.observed_property import ObservedProperty
-from edr_pydantic.parameter import Parameter
+from edr_pydantic.parameter import Parameters, Parameter
 from edr_pydantic.unit import Unit
 from edr_pydantic.variables import Variables
 
@@ -64,8 +64,8 @@ c = Collection(
             rel="service-doc"
         )
     ],
-    data_queries={
-        'position': EDRQuery(
+    data_queries=DataQueries(
+        position=EDRQuery(
             link=EDRQueryLink(
                 href="https://example.org/edr/collections/hrly_obs/position?coords={coords}",
                 rel="data",
@@ -77,8 +77,8 @@ c = Collection(
                 )
             )
         )
-    },
-    parameter_names={
+    ),
+    parameter_names=Parameters({
         "Wind Direction": Parameter(
             unit=Unit(
                 label="degree true"
@@ -88,7 +88,7 @@ c = Collection(
                 label="Wind Direction"
             )
         )
-    }
+    })
 )
 
 print(c.model_dump_json(indent=2, exclude_none=True))

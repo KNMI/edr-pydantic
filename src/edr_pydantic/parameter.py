@@ -1,8 +1,10 @@
+from typing import Dict
 from typing import List
 from typing import Literal
 from typing import Optional
 
 from pydantic import model_validator
+from pydantic import RootModel
 
 from .base_model import EdrBaseModel
 from .observed_property import ObservedProperty
@@ -26,6 +28,9 @@ class Parameter(EdrBaseModel, extra="allow"):
             )
 
         return self
+
+
+Parameters = RootModel[Dict[str, Parameter]]
 
 
 class ParameterGroup(EdrBaseModel, extra="allow"):

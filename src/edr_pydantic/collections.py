@@ -1,4 +1,3 @@
-from typing import Dict
 from typing import List
 from typing import Optional
 
@@ -6,7 +5,7 @@ from .base_model import EdrBaseModel
 from .data_queries import DataQueries
 from .extent import Extent
 from .link import Link
-from .parameter import Parameter
+from .parameter import Parameters
 
 
 class Collection(EdrBaseModel):
@@ -20,7 +19,7 @@ class Collection(EdrBaseModel):
     # TODO According to req A.13 it shall be CRS object, according to C.1 it is a string array
     crs: Optional[List[str]] = None
     output_formats: Optional[List[str]] = None
-    parameter_names: Dict[str, Parameter]
+    parameter_names: Parameters
     # TODO According to req A.13 may have distanceunits. If radius is in link, it shall have distanceunits
     distanceunits: Optional[List[str]] = None
 

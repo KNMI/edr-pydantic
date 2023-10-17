@@ -12,7 +12,9 @@ class Spatial(EdrBaseModel):
 
 
 class Temporal(EdrBaseModel):
+    # TODO: Validate this list has two items (C.7.  Temporal Object)
     interval: List[List[AwareDatetime]]
+    # TODO: Validate this is a list of ISO 8601 single time, ISO 8601 time duration or ISO 8601 interval
     values: List[str]
     trs: str
 

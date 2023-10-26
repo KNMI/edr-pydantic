@@ -166,6 +166,10 @@ pytest tests/
 
 This library is used to build an Environmental Data Retrieval (EDR) API, serving observation data from surface weather data station data from the KNMI. See the [KNMI Data Platform](https://developer.dataplatform.knmi.nl/edr-api).
 
+## Related projects
+* [CoverageJSON Pydantic](https://github.com/KNMI/covjson-pydantic)
+* [geojson-pydantic](https://github.com/developmentseed/geojson-pydantic)
+
 ## TODOs
 Help is wanted in the following areas to fully implement the EDR spec:
 * See TODOs in code listing various small inconsistencies in the spec

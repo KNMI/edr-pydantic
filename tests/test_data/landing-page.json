@@ -1,4 +1,6 @@
 {
+    "title": "Observations API EDR",
+    "description": "The observation api in EDR format from the KNMI",
     "links": [
         {
             "href": "https://api.dataplatform.knmi.nl/edr/",
@@ -26,8 +28,6 @@
             "title": "Collections metadata in JSON"
         }
     ],
-    "title": "Observations API EDR",
-    "description": "The observation api in EDR format from the KNMI",
     "keywords": [
         "Weather",
         "Temperature",

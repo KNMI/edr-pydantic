@@ -26,9 +26,9 @@ class Contact(EdrBaseModel):
 
 
 class LandingPageModel(EdrBaseModel):
-    links: List[Link]
     title: Optional[str] = None
     description: Optional[str] = None
+    links: List[Link]
     keywords: Optional[List[str]] = None
     provider: Optional[Provider] = None
     contact: Optional[Contact] = None

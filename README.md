@@ -162,13 +162,24 @@ pip install -e '.[test]'
 pytest tests/
 ```
 
-## Real world usage
+### Linting and typing
 
-This library is used to build an Environmental Data Retrieval (EDR) API, serving observation data from surface weather data station data from the KNMI. See the [KNMI Data Platform](https://developer.dataplatform.knmi.nl/edr-api).
+Linting and typing (mypy) is done using [pre-commit](https://pre-commit.com) hooks.
 
-## Related projects
+```shell
+pip install pre-commit
+pre-commit install
+pre-commit run
+```
+
+## Related packages
+
 * [CoverageJSON Pydantic](https://github.com/KNMI/covjson-pydantic)
 * [geojson-pydantic](https://github.com/developmentseed/geojson-pydantic)
+
+## Real world usage
+
+This library is used to build an OGC Environmental Data Retrieval (EDR) API, serving automatic weather data station data from The Royal Netherlands Meteorological Institute (KNMI). See the [KNMI Data Platform EDR API](https://developer.dataplatform.knmi.nl/edr-api).
 
 ## TODOs
 Help is wanted in the following areas to fully implement the EDR spec:

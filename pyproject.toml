@@ -19,8 +19,8 @@ classifiers = [
     "Topic :: Scientific/Engineering :: GIS",
     "Typing :: Typed",
 ]
-version = "0.2.1"
-dependencies = ["pydantic>=2.3,<3"]
+version = "0.2.2"
+dependencies = ["pydantic>=2.3,<3", "geojson-pydantic>1.0"]
 
 [project.optional-dependencies]
 test = ["pytest", "pytest-cov"]

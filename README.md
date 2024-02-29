@@ -23,6 +23,10 @@ This repository contains the edr-pydantic Python package. It provides [Pydantic]
 for the [OGC Environmental Data Retrieval (EDR) API](https://ogcapi.ogc.org/edr/).
 This can, for example, be used to help develop an EDR API using FastAPI.
 
+## Optional GeoJSON requirements for the EDR
+The EDR spec proposes to add [optional requirements](https://docs.ogc.org/is/19-086r4/19-086r4.html#toc9) to GeoJSON to help the user discover EDR resources. [GeoJSON Pydantic](https://github.com/developmentseed/geojson-pydantic) correctly ignores these extra attributes, as it is solely an implementation of GeoJSON, not EDR GeoJSON. Therefore, there is an EDR Feature collection model in this repository which is a limited implementation of the [EDRFeatureCollection implementation](https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/edr-geojson/edrFeatureCollectionGeoJSON.yaml). The model extends [GeoJSON Pydantic](https://github.com/developmentseed/geojson-pydantic) by adding the optional properties. In the future all the [EDR GeoJSON schemas](https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/edr-geojson/) should be in this repository.
+
+
 ## Install
 ```shell
 pip install edr-pydantic

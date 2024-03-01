@@ -1,0 +1,88 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.1797,
+                    52.0989,
+                    1.9
+                ]
+            },
+            "properties": {
+                "name": "DE BILT AWS",
+                "parameter-name": [
+                    "air_temperature_1.5_maximum_PT10M",
+                    "dew_point_temperature_1.5_mean_PT1M",
+                    "duration_of_sunshine_2.0_point_PT0S",
+                    "wind_speed_10_mean_PT10M"
+                ]
+            },
+            "id": "06260"
+        }
+    ],
+    "parameters": {
+        "tx_dryb_10": {
+            "type": "Parameter",
+            "description": "Temperature, air, maximum, 10",
+            "unit": {
+                "label": "degree Celsius",
+                "symbol": {
+                    "value": "°C",
+                    "type": "http://www.opengis.net/def/uom/UCUM/"
+                }
+            },
+            "observedProperty": {
+                "id": "https://vocab.nerc.ac.uk/standard_name/air_temperature",
+                "label": "Air temperature maximum"
+            }
+        },
+        "t_dewp_10": {
+            "type": "Parameter",
+            "description": "Temperature air dewpoint 10",
+            "unit": {
+                "label": "degree Celsius",
+                "symbol": {
+                    "value": "°C",
+                    "type": "http://www.opengis.net/def/uom/UCUM/"
+                }
+            },
+            "observedProperty": {
+                "id": "https://vocab.nerc.ac.uk/standard_name/dew_point_temperature",
+                "label": "Dew Point Temperature"
+            }
+        },
+        "sq_10": {
+            "type": "Parameter",
+            "description": "Sunshine duration, duration derived from radiation, 10",
+            "unit": {
+                "label": "minute",
+                "symbol": {
+                    "value": "min",
+                    "type": "http://www.opengis.net/def/uom/UCUM/"
+                }
+            },
+            "observedProperty": {
+                "id": "https://vocab.nerc.ac.uk/standard_name/duration_of_sunshine",
+                "label": "Sunshine duration"
+            }
+        },
+        "ff_10m_10": {
+            "type": "Parameter",
+            "description": "Wind, speed, average, converted to 10 metres, 10",
+            "unit": {
+                "label": "metre per second",
+                "symbol": {
+                    "value": "m/s",
+                    "type": "http://www.opengis.net/def/uom/UCUM/"
+                }
+            },
+            "observedProperty": {
+                "id": "https://vocab.nerc.ac.uk/standard_name/wind_speed",
+                "label": "wind_speed_10_mean_PT10M"
+            }
+        }
+    }
+}

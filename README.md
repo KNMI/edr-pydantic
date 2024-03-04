@@ -24,7 +24,7 @@ for the [OGC Environmental Data Retrieval (EDR) API](https://ogcapi.ogc.org/edr/
 This can, for example, be used to help develop an EDR API using FastAPI.
 
 ## EDR GeoJSON
-The EDR spec adds [optional fields](https://docs.ogc.org/is/19-086r4/19-086r4.html#toc9) to GeoJSON to help the user discover EDR resources. Therefore, there is an EDR Feature collection model in this repository which is a limited implementation of the [EDRFeatureCollection implementation](https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/edr-geojson/edrFeatureCollectionGeoJSON.yaml). The model extends [GeoJSON Pydantic](https://github.com/developmentseed/geojson-pydantic) by adding the optional properties. 
+The EDR spec adds [optional fields](https://docs.ogc.org/is/19-086r4/19-086r4.html#toc9) to GeoJSON to help the user discover EDR resources. Therefore, there is an EDR Feature collection model in this repository which is a limited implementation of the [EDRFeatureCollection implementation](https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/edr-geojson/edrFeatureCollectionGeoJSON.yaml). The model extends [GeoJSON Pydantic](https://github.com/developmentseed/geojson-pydantic) by adding the optional properties.
 
 
 ## Install
@@ -189,6 +189,7 @@ This library is used to build an OGC Environmental Data Retrieval (EDR) API, ser
 Help is wanted in the following areas to fully implement the EDR spec:
 * See TODOs in code listing various small inconsistencies in the spec
 * In various places there could be more validation on content
+* In the future all the [EDR GeoJSON schemas](https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/edr-geojson/) should be in this repository.
 
 ## License
 

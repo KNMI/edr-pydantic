@@ -26,62 +26,86 @@
     "parameters": {
         "tx_dryb_10": {
             "type": "Parameter",
-            "description": "Temperature, air, maximum, 10",
+            "description": {
+                "en": "Temperature, air, maximum, 10"
+            },
+            "observedProperty": {
+                "id": "https://vocab.nerc.ac.uk/standard_name/air_temperature",
+                "label": {
+                    "en": "Air temperature maximum"
+                }
+            },
             "unit": {
-                "label": "degree Celsius",
+                "label": {
+                    "en": "degree Celsius"
+                },
                 "symbol": {
                     "value": "°C",
                     "type": "http://www.opengis.net/def/uom/UCUM/"
                 }
-            },
-            "observedProperty": {
-                "id": "https://vocab.nerc.ac.uk/standard_name/air_temperature",
-                "label": "Air temperature maximum"
             }
         },
         "t_dewp_10": {
             "type": "Parameter",
-            "description": "Temperature air dewpoint 10",
+            "description": {
+                "en": "Temperature air dewpoint 10"
+            },
+            "observedProperty": {
+                "id": "https://vocab.nerc.ac.uk/standard_name/dew_point_temperature",
+                "label": {
+                    "en": "Dew Point Temperature"
+                }
+            },
             "unit": {
-                "label": "degree Celsius",
+                "label": {
+                    "en": "degree Celsius"
+                },
                 "symbol": {
                     "value": "°C",
                     "type": "http://www.opengis.net/def/uom/UCUM/"
                 }
-            },
-            "observedProperty": {
-                "id": "https://vocab.nerc.ac.uk/standard_name/dew_point_temperature",
-                "label": "Dew Point Temperature"
             }
         },
         "sq_10": {
             "type": "Parameter",
-            "description": "Sunshine duration, duration derived from radiation, 10",
+            "description": {
+                "en": "Sunshine duration, duration derived from radiation, 10"
+            },
+            "observedProperty": {
+                "id": "https://vocab.nerc.ac.uk/standard_name/duration_of_sunshine",
+                "label": {
+                    "en": "Sunshine duration"
+                }
+            },
             "unit": {
-                "label": "minute",
+                "label": {
+                    "en": "minute"
+                },
                 "symbol": {
                     "value": "min",
                     "type": "http://www.opengis.net/def/uom/UCUM/"
                 }
-            },
-            "observedProperty": {
-                "id": "https://vocab.nerc.ac.uk/standard_name/duration_of_sunshine",
-                "label": "Sunshine duration"
             }
         },
         "ff_10m_10": {
             "type": "Parameter",
-            "description": "Wind, speed, average, converted to 10 metres, 10",
+            "description": {
+                "en": "Wind, speed, average, converted to 10 metres, 10"
+            },
+            "observedProperty": {
+                "id": "https://vocab.nerc.ac.uk/standard_name/wind_speed",
+                "label": {
+                    "en": "wind_speed_10_mean_PT10M"
+                }
+            },
             "unit": {
-                "label": "metre per second",
+                "label": {
+                    "en": "metre per second"
+                },
                 "symbol": {
                     "value": "m/s",
                     "type": "http://www.opengis.net/def/uom/UCUM/"
                 }
-            },
-            "observedProperty": {
-                "id": "https://vocab.nerc.ac.uk/standard_name/wind_speed",
-                "label": "wind_speed_10_mean_PT10M"
             }
         }
     }

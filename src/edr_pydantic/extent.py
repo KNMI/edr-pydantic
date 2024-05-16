@@ -1,5 +1,6 @@
 from typing import List
 from typing import Optional
+from typing import Union
 
 from pydantic import AwareDatetime
 
@@ -26,10 +27,10 @@ class Vertical(EdrBaseModel):
 
 
 class Custom(EdrBaseModel):
-    interval: List[str]
     id: str
-    values: List[str]
-    reference: Optional[str] = None
+    interval: List[List[Union[str, float]]]
+    values: Optional[List[Union[str, float]]] = None
+    reference: str
 
 
 class Extent(EdrBaseModel):

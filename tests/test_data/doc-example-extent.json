@@ -1,0 +1,61 @@
+{
+    "spatial": {
+        "bbox": [
+            [
+                -180.0,
+                -90.0,
+                180.0,
+                90.0
+            ]
+        ],
+        "crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+    },
+    "temporal": {
+        "interval": [
+            [
+                "2017-06-14T00:00:00Z",
+                "2017-06-14T12:00:00Z"
+            ]
+        ],
+        "values": [
+            "2017-06-14T00:00:00Z",
+            "2017-06-14T06:00:00Z",
+            "2017-06-14T12:00:00Z",
+            "2017-06-14T18:00:00Z"
+        ],
+        "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]]"
+    },
+    "custom": [
+        {
+            "id": "realisations",
+            "interval": [
+                [
+                    1.0,
+                    50.0
+                ]
+            ],
+            "values": [
+                "R50/1/1"
+            ],
+            "reference": "Ensemble members"
+        },
+        {
+            "id": "icao_ids",
+            "interval": [
+                [
+                    "EB",
+                    "EB"
+                ]
+            ],
+            "values": [
+                "EBAW",
+                "EBBR",
+                "EBBR",
+                "EBKT",
+                "EBLG",
+                "EBOS"
+            ],
+            "reference": "https://en.wikipedia.org/wiki/ICAO_airport_code"
+        }
+    ]
+}

@@ -5,6 +5,7 @@ import pytest
 from edr_pydantic.capabilities import LandingPageModel
 from edr_pydantic.collections import Collections
 from edr_pydantic.collections import Instance
+from edr_pydantic.extent import Extent
 from edr_pydantic.unit import Unit
 from pydantic import ValidationError
 
@@ -13,6 +14,7 @@ happy_cases = [
     ("doc-example-collections.json", Collections),
     ("simple-instance.json", Instance),
     ("landing-page.json", LandingPageModel),
+    ("doc-example-extent.json", Extent),
 ]
 
 

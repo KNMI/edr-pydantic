@@ -1,0 +1,59 @@
+{
+    "Temperature_altitude_above_msl": {
+        "type": "Parameter",
+        "description": "Temperature for Specific altitude above MSL",
+        "unit": {
+            "label": "K",
+            "symbol": {
+                "value": "K",
+                "type": "http://qudt.org/vocab/unit/K"
+            }
+        },
+        "observedProperty": {
+            "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-0-0",
+            "label": "Temperature_altitude_above_msl"
+        },
+        "measurementType": {
+            "method": "instantaneous",
+            "period": "PT0S"
+        }
+    },
+    "u-component_of_wind_altitude_above_msl": {
+        "type": "Parameter",
+        "description": "u-component of wind for Specific altitude above MSL",
+        "unit": {
+            "label": "m/s",
+            "symbol": {
+                "value": "m%20s",
+                "type": "http://qudt.org/vocab/unit/M-PER-SEC.html"
+            }
+        },
+        "observedProperty": {
+            "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-2",
+            "label": "u-component_of_wind_altitude_above_msl"
+        },
+        "measurementType": {
+            "method": "instantaneous",
+            "period": "PT0S"
+        }
+    },
+    "v-component_of_wind_altitude_above_msl": {
+        "type": "Parameter",
+        "description": "v-component of wind for Specific altitude above MSL",
+        "unit": {
+            "label": "m/s",
+            "symbol": {
+                "value": "m%20s",
+                "type": "http://qudt.org/vocab/unit/M-PER-SEC.html"
+            }
+        },
+        "observedProperty": {
+            "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-3",
+            "label": "v-component_of_wind_altitude_above_msl"
+        },
+        "measurementType": {
+            "method": "instantaneous",
+            "period": "PT0S"
+        }
+    }
+}

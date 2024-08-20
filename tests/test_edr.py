@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from typing import Dict
 
 import pytest
 from edr_pydantic.capabilities import LandingPageModel
@@ -17,7 +18,7 @@ happy_cases = [
     ("simple-instance.json", Instance),
     ("landing-page.json", LandingPageModel),
     ("doc-example-extent.json", Extent),
-    ("parameter-names.json", RootModel[dict[str, Parameter]]),
+    ("parameter-names.json", RootModel[Dict[str, Parameter]]),
 ]
 
 

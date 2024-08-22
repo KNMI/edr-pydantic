@@ -11,6 +11,14 @@ from .observed_property import ObservedProperty
 from .unit import Unit
 
 
+class MeasurementType(EdrBaseModel):
+    method: str
+    # TODO: Add validation of ISO 8601 duration (including leading minus sign)
+    # TODO: Confusion in spec on the field name, duration versus period.
+    #  See https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/560
+    period: str
+
+
 class Parameter(EdrBaseModel, extra="allow"):
     type: Literal["Parameter"] = "Parameter"
     id: Optional[str] = None
@@ -18,6 +26,7 @@ class Parameter(EdrBaseModel, extra="allow"):
     description: Optional[str] = None
     unit: Optional[Unit] = None
     observedProperty: ObservedProperty  # noqa: N815
+    measurementType: Optional[MeasurementType] = None  # noqa: N815
 
     @model_validator(mode="after")
     def must_not_have_unit_if_observed_property_has_categories(self):

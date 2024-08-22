@@ -13,7 +13,7 @@ from .unit import Unit
 
 class MeasurementType(EdrBaseModel):
     # TODO: Confusion in spec on field name, method versus period.
-    #  See https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/573
+    #  See https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/560
     method: str
     # TODO: Add validation of ISO 8601 duration
     period: str

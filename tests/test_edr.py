@@ -19,6 +19,7 @@ happy_cases = [
     ("landing-page.json", LandingPageModel),
     ("doc-example-extent.json", Extent),
     ("parameter-names.json", RootModel[Dict[str, Parameter]]),
+    ("parameter-with-extent.json", Parameter),
 ]
 
 

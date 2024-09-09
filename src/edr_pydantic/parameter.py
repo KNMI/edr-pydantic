@@ -7,6 +7,7 @@ from pydantic import model_validator
 from pydantic import RootModel
 
 from .base_model import EdrBaseModel
+from .extent import Extent
 from .observed_property import ObservedProperty
 from .unit import Unit
 
@@ -26,6 +27,7 @@ class Parameter(EdrBaseModel, extra="allow"):
     description: Optional[str] = None
     unit: Optional[Unit] = None
     observedProperty: ObservedProperty  # noqa: N815
+    extent: Optional[Extent] = None
     measurementType: Optional[MeasurementType] = None  # noqa: N815
 
     @model_validator(mode="after")

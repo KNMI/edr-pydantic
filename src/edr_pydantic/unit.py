@@ -7,10 +7,10 @@ from .base_model import EdrBaseModel
 
 
 class Symbol(EdrBaseModel, extra="allow"):
+    value: str
+    type: str
     title: Optional[str] = None
     description: Optional[str] = None
-    value: Optional[str] = None
-    type: Optional[str] = None
 
 
 class Unit(EdrBaseModel):

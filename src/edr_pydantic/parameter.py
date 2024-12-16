@@ -40,6 +40,16 @@ class MeasurementType(EdrBaseModel):
     method: str
     duration: ISO8601Duration
 
+    @model_validator(mode="after")
+    def must_have_single_duration_if_instantaneous_method(self):
+        if self.method == "instantaneous" and "/" in self.duration:
+            raise ValueError(
+                "A measurement type object with 'instantaneous' method "
+                "MUST have a single duration."
+            )
+
+        return self
+
 
 class Parameter(EdrBaseModel, extra="allow"):
     type: Literal["Parameter"] = "Parameter"

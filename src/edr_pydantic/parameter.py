@@ -15,9 +15,7 @@ from .unit import Unit
 class MeasurementType(EdrBaseModel):
     method: str
     # TODO: Add validation of ISO 8601 duration (including leading minus sign)
-    # TODO: Confusion in spec on the field name, duration versus period.
-    #  See https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/560
-    period: str
+    duration: str
 
 
 class Parameter(EdrBaseModel, extra="allow"):

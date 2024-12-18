@@ -198,7 +198,7 @@
                     },
                     "measurementType": {
                         "method": "mean",
-                        "duration": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Wind Speed": {
@@ -217,7 +217,7 @@
                     },
                     "measurementType": {
                         "method": "mean",
-                        "duration": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Wind Gust": {
@@ -236,7 +236,7 @@
                     },
                     "measurementType": {
                         "method": "maximum",
-                        "duration": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Air Temperature": {
@@ -539,7 +539,7 @@
                     },
                     "measurementType": {
                         "method": "mean",
-                        "duration": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Wind Speed": {
@@ -558,7 +558,7 @@
                     },
                     "measurementType": {
                         "method": "mean",
-                        "duration": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Wind Gust": {
@@ -577,7 +577,7 @@
                     },
                     "measurementType": {
                         "method": "maximum",
-                        "duration": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Air Temperature": {

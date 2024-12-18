@@ -1,10 +1,10 @@
-from typing import Annotated
 from typing import List
 from typing import Optional
 from typing import Union
 
 from annotated_types import Len
 from pydantic import AwareDatetime
+from typing_extensions import Annotated
 
 from .base_model import EdrBaseModel
 

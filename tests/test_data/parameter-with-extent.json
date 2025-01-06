@@ -39,6 +39,6 @@
     },
     "measurementType": {
         "method": "instantaneous",
-        "period": "PT0S"
+        "duration": "PT0S"
     }
 }

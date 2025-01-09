@@ -1,21 +1,54 @@
+from datetime import timedelta
+from typing import Annotated
 from typing import Dict
 from typing import List
 from typing import Literal
 from typing import Optional
 
+from pydantic import AfterValidator
 from pydantic import model_validator
 from pydantic import RootModel
+from pydantic import TypeAdapter
 
 from .base_model import EdrBaseModel
 from .extent import Extent
 from .observed_property import ObservedProperty
 from .unit import Unit
 
+duration_adapter = TypeAdapter(timedelta)
+
+
+def check_iso8601_duration(value: str) -> str:
+    if "/" in value:
+        parts = value.split("/")
+
+        if len(parts) != 2:
+            raise ValueError("Duration must have two parts if it contains a '/'")
+
+        duration_adapter.validate_python(parts[0])
+        duration_adapter.validate_python(parts[1])
+    else:
+        duration_adapter.validate_python(value)
+
+    return value
+
+
+ISO8601Duration = Annotated[str, AfterValidator(check_iso8601_duration)]
+
 
 class MeasurementType(EdrBaseModel):
     method: str
-    # TODO: Add validation of ISO 8601 duration (including leading minus sign)
-    duration: str
+    duration: ISO8601Duration
+
+    @model_validator(mode="after")
+    def must_have_single_duration_if_instantaneous_method(self):
+        if self.method == "instantaneous" and "/" in self.duration:
+            raise ValueError(
+                "A measurement type object with 'instantaneous' method "
+                "MUST have a single duration."
+            )
+
+        return self
 
 
 class Parameter(EdrBaseModel, extra="allow"):

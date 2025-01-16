@@ -6,7 +6,8 @@ import pytest
 from edr_pydantic.capabilities import LandingPageModel
 from edr_pydantic.collections import Collections
 from edr_pydantic.collections import Instance
-from edr_pydantic.extent import Extent, Temporal
+from edr_pydantic.extent import Extent
+from edr_pydantic.extent import Temporal
 from edr_pydantic.parameter import Parameter
 from edr_pydantic.unit import Unit
 from pydantic import RootModel

@@ -6,7 +6,7 @@ import pytest
 from edr_pydantic.capabilities import LandingPageModel
 from edr_pydantic.collections import Collections
 from edr_pydantic.collections import Instance
-from edr_pydantic.extent import Extent
+from edr_pydantic.extent import Extent, Temporal
 from edr_pydantic.parameter import Parameter
 from edr_pydantic.unit import Unit
 from pydantic import RootModel
@@ -35,7 +35,10 @@ def test_happy_cases(file_name, object_type):
     assert object_type.model_validate_json(json_string).model_dump_json(exclude_none=True) == json_string
 
 
-error_cases = [("label-or-symbol-unit.json", Unit, r"Either 'label' or 'symbol' should be set")]
+error_cases = [
+    ("label-or-symbol-unit.json", Unit, r"Either 'label' or 'symbol' should be set"),
+    ("temporal-interval.json", Temporal, r"List should have at least 2 items after validation"),
+]
 
 
 @pytest.mark.parametrize("file_name, object_type, error_message", error_cases)

@@ -4,19 +4,18 @@ on:
   push:
     branches:
     - main
-    - KDP-1528
     tags:
     - '*'
   pull_request:
 env:
-  LATEST_PY_VERSION: '3.10'
+  LATEST_PY_VERSION: '3.12'
 
 jobs:
   tests:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12', '3.13']
 
     steps:
       - uses: actions/checkout@v4

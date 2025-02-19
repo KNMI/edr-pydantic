@@ -38,7 +38,8 @@ def test_happy_cases(file_name, object_type):
 
 error_cases = [
     ("label-or-symbol-unit.json", Unit, r"Either 'label' or 'symbol' should be set"),
-    ("temporal-interval.json", Temporal, r"List should have at least 2 items after validation"),
+    ("temporal-interval-length1.json", Temporal, r"List should have at least 2 items after validation"),
+    ("temporal-interval-length3.json", Temporal, r"List should have at most 2 items after validation, not 3"),
 ]
 
 

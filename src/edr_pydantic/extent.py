@@ -14,11 +14,8 @@ class Spatial(EdrBaseModel):
     crs: str
 
 
-IntervalLen = Len(min_length=2, max_length=2)
-
-
 class Temporal(EdrBaseModel):
-    interval: List[Annotated[List[AwareDatetime], IntervalLen]]
+    interval: List[Annotated[List[AwareDatetime], Len(min_length=2, max_length=2)]]
     # TODO: Validate this is a list of ISO 8601 single time, ISO 8601 time duration or ISO 8601 interval
     values: List[str]
     trs: str

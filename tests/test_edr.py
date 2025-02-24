@@ -34,7 +34,7 @@ def test_happy_cases(file_name, object_type):
     json_string = json.dumps(data, separators=(",", ":"), ensure_ascii=False)
 
     # Round-trip
-    assert object_type.model_validate_json(json_string).model_dump_json(exclude_none=True, by_alias=True) == json_string
+    assert object_type.model_validate_json(json_string).model_dump_json(exclude_none=True) == json_string
 
 
 error_cases = [
@@ -68,4 +68,16 @@ def test_data_type_alias():
     assert (
         p.model_dump_json(exclude_none=True, by_alias=True)
         == '{"type":"Parameter","data-type":"integer","observedProperty":{"label":"Wind"}}'
+    )
+
+
+def test_parameters_root_model():
+    file = Path(__file__).parent.resolve() / "test_data" / "parameter-names.json"
+    with open(file, "r") as f:
+        parameters = Parameters.model_validate_json(f.read())
+
+    assert parameters["Temperature_altitude_above_msl"].description == "Temperature for Specific altitude above MSL"
+    assert (
+        parameters.get("u-component_of_wind_altitude_above_msl").description
+        == "u-component of wind for Specific altitude above MSL"
     )

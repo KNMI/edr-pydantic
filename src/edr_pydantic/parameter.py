@@ -3,6 +3,7 @@ from typing import List
 from typing import Literal
 from typing import Optional
 
+from pydantic import Field
 from pydantic import model_validator
 from pydantic import RootModel
 
@@ -27,6 +28,7 @@ class Parameter(EdrBaseModel, extra="allow"):
     observedProperty: ObservedProperty  # noqa: N815
     extent: Optional[Extent] = None
     measurementType: Optional[MeasurementType] = None  # noqa: N815
+    data_type: Optional[Literal["integer", "float", "string"]] = Field(None, serialization_alias="data-type")
 
     @model_validator(mode="after")
     def must_not_have_unit_if_observed_property_has_categories(self):

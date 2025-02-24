@@ -1,0 +1,23 @@
+{
+    "str-parameter": {
+        "type": "Parameter",
+        "observedProperty": {
+            "label": "Temperature_altitude_above_msl"
+        },
+        "data-type": "string"
+    },
+    "int-parameter": {
+        "type": "Parameter",
+        "observedProperty": {
+            "label": "u-component_of_wind_altitude_above_msl"
+        },
+        "data-type": "integer"
+    },
+    "float-parameter": {
+        "type": "Parameter",
+        "observedProperty": {
+            "label": "v-component_of_wind_altitude_above_msl"
+        },
+        "data-type": "float"
+    }
+}

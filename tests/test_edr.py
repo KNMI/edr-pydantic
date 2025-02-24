@@ -81,3 +81,4 @@ def test_parameters_root_model():
         parameters.get("u-component_of_wind_altitude_above_msl").description
         == "u-component of wind for Specific altitude above MSL"
     )
+    assert len([p for p in parameters]) == 3

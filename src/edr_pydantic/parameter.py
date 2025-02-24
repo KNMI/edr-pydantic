@@ -47,8 +47,8 @@ class Parameters(RootModel):
     def __iter__(self):
         return iter(self.root)
 
-    def __getitem__(self, item):
-        return self.root[item]
+    def __getitem__(self, key):
+        return self.root[key]
 
     def get(self, key, default=None):
         return self.root.get(key, default)

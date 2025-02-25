@@ -9,6 +9,7 @@ from edr_pydantic.collections import Instance
 from edr_pydantic.extent import Extent
 from edr_pydantic.extent import Temporal
 from edr_pydantic.parameter import Parameter
+from edr_pydantic.parameter import Parameters
 from edr_pydantic.unit import Unit
 from pydantic import RootModel
 from pydantic import ValidationError
@@ -53,3 +54,16 @@ def test_error_cases(file_name, object_type, error_message):
 
     with pytest.raises(ValidationError, match=error_message):
         object_type.model_validate_json(json_string)
+
+
+def test_parameters_root_model():
+    file = Path(__file__).parent.resolve() / "test_data" / "parameter-names.json"
+    with open(file, "r") as f:
+        parameters = Parameters.model_validate_json(f.read())
+
+    assert parameters["Temperature_altitude_above_msl"].description == "Temperature for Specific altitude above MSL"
+    assert (
+        parameters.get("u-component_of_wind_altitude_above_msl").description
+        == "u-component of wind for Specific altitude above MSL"
+    )
+    assert len([p for p in parameters]) == 3

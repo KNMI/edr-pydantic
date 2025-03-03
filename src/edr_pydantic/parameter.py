@@ -24,11 +24,11 @@ class Parameter(EdrBaseModel, extra="allow"):
     id: Optional[str] = None
     label: Optional[str] = None
     description: Optional[str] = None
+    data_type: Optional[Literal["integer", "float", "string"]] = Field(None, alias="data-type")
     unit: Optional[Unit] = None
     observedProperty: ObservedProperty  # noqa: N815
     extent: Optional[Extent] = None
     measurementType: Optional[MeasurementType] = None  # noqa: N815
-    data_type: Optional[Literal["integer", "float", "string"]] = Field(None, serialization_alias="data-type")
 
     @model_validator(mode="after")
     def must_not_have_unit_if_observed_property_has_categories(self):

@@ -1,0 +1,7 @@
+{
+    "type": "Parameter",
+    "data-type": "foobar",
+    "observedProperty": {
+        "label": "invalid parameter"
+    }
+}

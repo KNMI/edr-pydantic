@@ -33,9 +33,10 @@ c = Collection(
                 observedProperty=ObservedProperty(
                     id="https://codes.wmo.int/common/quantity-kind/_windDirection", label="Wind Direction"
                 ),
+                data_type="integer",
             )
         }
     ),
 )
 
-print(c.model_dump_json(indent=2, exclude_none=True))
+print(c.model_dump_json(indent=2, exclude_none=True, by_alias=True))

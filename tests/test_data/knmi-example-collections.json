@@ -449,6 +449,7 @@
                 "tx_dryb_10": {
                     "type": "Parameter",
                     "description": "Temperature, air, maximum, 10'",
+                    "data-type": "float",
                     "unit": {
                         "label": "degree Celsius",
                         "symbol": {
@@ -459,8 +460,7 @@
                     "observedProperty": {
                         "id": "https://vocab.nerc.ac.uk/standard_name/air_temperature/",
                         "label": "Air temperature maximum"
-                    },
-                    "data-type": "float"
+                    }
                 },
                 "u_10": {
                     "type": "Parameter",
@@ -480,6 +480,7 @@
                 "ww_cor_10": {
                     "type": "Parameter",
                     "description": "Weather, validated code, present weather sensor, 10'",
+                    "data-type": "integer",
                     "unit": {
                         "label": "weather code",
                         "symbol": {
@@ -490,8 +491,7 @@
                     "observedProperty": {
                         "id": "KNMI: Handboek waarnemingen",
                         "label": "Weather code (validated)"
-                    },
-                    "data-type": "integer"
+                    }
                 },
                 "ww_curr_10": {
                     "type": "Parameter",

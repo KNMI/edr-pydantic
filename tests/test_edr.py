@@ -7,6 +7,7 @@ from edr_pydantic.collections import Collections
 from edr_pydantic.collections import Instance
 from edr_pydantic.extent import Extent
 from edr_pydantic.extent import Temporal
+from edr_pydantic.observed_property import ObservedProperty
 from edr_pydantic.parameter import Parameter
 from edr_pydantic.parameter import Parameters
 from edr_pydantic.unit import Unit
@@ -33,13 +34,14 @@ def test_happy_cases(file_name, object_type):
     json_string = json.dumps(data, separators=(",", ":"), ensure_ascii=False)
 
     # Round-trip
-    assert object_type.model_validate_json(json_string).model_dump_json(exclude_none=True) == json_string
+    assert object_type.model_validate_json(json_string).model_dump_json(exclude_none=True, by_alias=True) == json_string
 
 
 error_cases = [
     ("label-or-symbol-unit.json", Unit, r"Either 'label' or 'symbol' should be set"),
     ("temporal-interval-length1.json", Temporal, r"List should have at least 2 items after validation"),
     ("temporal-interval-length3.json", Temporal, r"List should have at most 2 items after validation, not 3"),
+    ("parameter-invalid-data-type.json", Parameter, r"Input should be 'integer', 'float' or 'string'"),
 ]
 
 
@@ -53,3 +55,17 @@ def test_error_cases(file_name, object_type, error_message):
 
     with pytest.raises(ValidationError, match=error_message):
         object_type.model_validate_json(json_string)
+
+
+def test_data_type_alias():
+    p = Parameter(observedProperty=ObservedProperty(label="Wind"), data_type="integer")
+
+    # This tests for the current observed Pydantic behavior with model_dump() and the `by_alias` setting
+    assert (
+        p.model_dump_json(exclude_none=True)
+        == '{"type":"Parameter","data_type":"integer","observedProperty":{"label":"Wind"}}'
+    )
+    assert (
+        p.model_dump_json(exclude_none=True, by_alias=True)
+        == '{"type":"Parameter","data-type":"integer","observedProperty":{"label":"Wind"}}'
+    )

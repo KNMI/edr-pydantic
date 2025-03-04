@@ -1,0 +1,23 @@
+{
+    "str-parameter": {
+        "type": "Parameter",
+        "data-type": "string",
+        "observedProperty": {
+            "label": "string parameter"
+        }
+    },
+    "int-parameter": {
+        "type": "Parameter",
+        "data-type": "integer",
+        "observedProperty": {
+            "label": "int parameter"
+        }
+    },
+    "float-parameter": {
+        "type": "Parameter",
+        "data-type": "float",
+        "observedProperty": {
+            "label": "float parameter"
+        }
+    }
+}

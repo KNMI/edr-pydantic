@@ -10,4 +10,5 @@ class EdrBaseModel(PydanticBaseModel):
         validate_default=True,
         validate_assignment=True,
         strict=True,
+        populate_by_name=True,
     )

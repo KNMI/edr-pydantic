@@ -449,6 +449,7 @@
                 "tx_dryb_10": {
                     "type": "Parameter",
                     "description": "Temperature, air, maximum, 10'",
+                    "data-type": "float",
                     "unit": {
                         "label": "degree Celsius",
                         "symbol": {
@@ -479,6 +480,7 @@
                 "ww_cor_10": {
                     "type": "Parameter",
                     "description": "Weather, validated code, present weather sensor, 10'",
+                    "data-type": "integer",
                     "unit": {
                         "label": "weather code",
                         "symbol": {

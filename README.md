@@ -86,12 +86,13 @@ c = Collection(
             observedProperty=ObservedProperty(
                 id="https://codes.wmo.int/common/quantity-kind/_windDirection",
                 label="Wind Direction"
-            )
+            ),
+            dataType="integer"
         )
     })
 )
 
-print(c.model_dump_json(indent=2, exclude_none=True))
+print(c.model_dump_json(indent=2, exclude_none=True, by_alias=True))
 ```
 
 Will print
@@ -136,6 +137,7 @@ Will print
   "parameter_names": {
     "Wind Direction": {
       "type": "Parameter",
+      "data-type": "integer",
       "unit": {
         "label": "degree true"
       },
@@ -147,6 +149,9 @@ Will print
   }
 }
 ```
+
+**IMPORTANT**: The arguments `by_alias=True` to `model_dump_json()` or `model_dump()` is required to get the output as shown above. Without `by_alias=True` the attribute `data-type` will be wrongly outputted as `dataType`. This is due an issue in the [EDR spec](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/605) and [Pydantic](https://github.com/pydantic/pydantic/issues/8379).
+
 
 ## Contributing
 

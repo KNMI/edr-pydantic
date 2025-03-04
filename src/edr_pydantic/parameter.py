@@ -3,6 +3,7 @@ from typing import List
 from typing import Literal
 from typing import Optional
 
+from pydantic import Field
 from pydantic import model_validator
 from pydantic import RootModel
 
@@ -23,6 +24,7 @@ class Parameter(EdrBaseModel, extra="allow"):
     id: Optional[str] = None
     label: Optional[str] = None
     description: Optional[str] = None
+    dataType: Optional[Literal["integer", "float", "string"]] = Field(None, alias="data-type")  # noqa: N815
     unit: Optional[Unit] = None
     observedProperty: ObservedProperty  # noqa: N815
     extent: Optional[Extent] = None

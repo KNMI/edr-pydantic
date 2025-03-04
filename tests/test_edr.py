@@ -58,12 +58,12 @@ def test_error_cases(file_name, object_type, error_message):
 
 
 def test_data_type_alias():
-    p = Parameter(observedProperty=ObservedProperty(label="Wind"), data_type="integer")
+    p = Parameter(observedProperty=ObservedProperty(label="Wind"), dataType="integer")
 
     # This tests for the current observed Pydantic behavior with model_dump() and the `by_alias` setting
     assert (
         p.model_dump_json(exclude_none=True)
-        == '{"type":"Parameter","data_type":"integer","observedProperty":{"label":"Wind"}}'
+        == '{"type":"Parameter","dataType":"integer","observedProperty":{"label":"Wind"}}'
     )
     assert (
         p.model_dump_json(exclude_none=True, by_alias=True)

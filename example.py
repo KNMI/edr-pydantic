@@ -33,7 +33,7 @@ c = Collection(
                 observedProperty=ObservedProperty(
                     id="https://codes.wmo.int/common/quantity-kind/_windDirection", label="Wind Direction"
                 ),
-                data_type="integer",
+                dataType="integer",
             )
         }
     ),

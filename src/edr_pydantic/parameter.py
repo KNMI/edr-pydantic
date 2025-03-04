@@ -24,7 +24,7 @@ class Parameter(EdrBaseModel, extra="allow"):
     id: Optional[str] = None
     label: Optional[str] = None
     description: Optional[str] = None
-    data_type: Optional[Literal["integer", "float", "string"]] = Field(None, alias="data-type")
+    dataType: Optional[Literal["integer", "float", "string"]] = Field(None, alias="data-type")  # noqa: N815
     unit: Optional[Unit] = None
     observedProperty: ObservedProperty  # noqa: N815
     extent: Optional[Extent] = None

@@ -69,3 +69,13 @@ def test_data_type_alias():
         p.model_dump_json(exclude_none=True, by_alias=True)
         == '{"type":"Parameter","data-type":"integer","observedProperty":{"label":"Wind"}}'
     )
+
+
+def test_parameters_root_model():
+    file = Path(__file__).parent.resolve() / "test_data" / "parameter-with-data-type.json"
+    with open(file, "r") as f:
+        parameters = Parameters.model_validate_json(f.read())
+
+    assert parameters["str-parameter"].observedProperty.label == "string parameter"
+    assert parameters.get("int-parameter").observedProperty.label == "int parameter"
+    assert len([p for p in parameters]) == 3
